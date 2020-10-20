@@ -5,6 +5,8 @@ import 'express-async-errors';
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 
+import './di';
+import './typeorm/connection';
 import AppError from './errors/AppError';
 import routes from './routes';
 
