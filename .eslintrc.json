@@ -1,7 +1,8 @@
 {
   "env": {
     "es2020": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "extends": [
     "airbnb-base",
@@ -19,7 +20,11 @@
     "prettier"
   ],
   "rules": {
+    "camelcase": "off",
+    "no-param-reassign": "off",
+    "no-useless-constructor": "off",
     "prettier/prettier": "error",
+    "class-methods-use-this": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
