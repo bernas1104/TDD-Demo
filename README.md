@@ -9,6 +9,18 @@ o repositório, basta navegar até a pasta contendo o código e executar o coman
 
 > npm i
 
-Após a conclusão do processo, o servidor pode ser inicializado utilizando o comando:
+Após a conclusão do processo, é necessário rodar as migrations para configurar o banco de dados SQLite:
+
+> npm run typeorm migration:run
+
+Com o banco de dados configurado, pode-se iniciar o servidor:
 
 > npm run dev
+
+## Testes
+
+Para executar os testes do sistema, basta executar:
+
+> npm run test
+
+Os dados de coberturas podem ser encontrados na pasta "coverage/lcov-report/index.html".
