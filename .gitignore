@@ -1,4 +1,5 @@
 node_modules/
 coverage/
-yarn.lock
 database.sql
+yarn.lock
+yarn-error.log
