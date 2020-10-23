@@ -23,10 +23,24 @@ export default class FakeUsersRepository implements IUsersRepository {
       updated_at: new Date(),
     });
 
+    this.users.push(user);
+
     return user;
   }
 
   public async findAll(): Promise<User[]> {
     return this.users;
+  }
+
+  public async findByCpf(cpf: string): Promise<User | undefined> {
+    return this.users.find(x => x.cpf === cpf);
+  }
+
+  public async findByRg(rg: string): Promise<User | undefined> {
+    return this.users.find(x => x.rg === rg);
+  }
+
+  public async findByEmail(email: string): Promise<User | undefined> {
+    return this.users.find(x => x.email === email);
   }
 }
